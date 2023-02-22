@@ -1,0 +1,263 @@
+/* Start Scroll */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #d8e2da;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track{
+    background-color: #344e41;
+}
+/* End Scroll */
+:link{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Me-Font';
+    src: url(../fontGoogle/Roboto/Roboto-Italic.ttf);
+}
+*, *:before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.7s;
+    font-family: 'Me-Font';
+}
+body > a svg{
+    color: #0a0a0a;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    transition: 0s;
+}
+body::before{
+    content: '';
+    position: fixed;
+    background: url(../media/Landing\ IMG/ImageHeaderAI2.jpg) no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+/* Start Logo */
+.logo{
+    color: transparent;
+    -webkit-text-stroke: 0.50pt #dad7cd;
+    
+}
+.logo::before{
+    content: attr(aria-work);
+    position: absolute;
+    color: #dad7cd;
+    width: 0%;
+    height: 100%;
+    border-right: 1px solid #dad7cd;
+    overflow: hidden;
+    animation:logo-animation 5s linear infinite;
+}
+@keyframes logo-animation {
+    0%, 20%, 90%{
+        width: 0%;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+/* End Logo */
+/* Start Nav */
+.nav{
+    background-color: #344e41;
+}
+nav ul li a{
+    display: block;
+    color:#dad7cd ;
+    padding: 10px 20px;
+    transition: border 0.3s;
+    cursor: pointer;
+    transition: 0.2s !important;
+}
+nav ul li.active a{
+    background-color: #dad7cd;
+    color: #344e41;
+}
+nav ul li a:hover{
+    background-color: transparent;
+    outline: 3px #dad7cd solid;
+    color: #dad7cd;
+}
+/* End Nav */
+/* Start Presentacion */
+.Presente{
+    background-color: #344e41;
+}
+/* End Presentacion */
+/* Start Maquinas */
+.card{
+    height: 200px;
+    overflow: hidden;
+    padding: 2px 0;  
+    cursor: pointer;
+    margin: 0 10px;
+}
+.card:hover{
+    height: 280px;
+    transform: scale(1.1);
+}
+@media (max-width:767px){
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+        height: 180px;
+        width: 70%;
+    }
+    .card:hover{
+        height: 250px;
+    }
+   
+}
+.card::before{
+    content: attr(aria-info);
+    position: absolute;
+    color: #dad7cd;
+    top: 0;
+    background-color: #3A5A40;
+    height: fit-content;
+    padding: 5px ;
+    width: 100%;
+    transform: translateY(-110px);
+
+}
+.card:hover:before{
+    transform: translateY(0px);
+
+}
+.img-machine{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding-top: 5px;
+    width: 80%;
+}
+.card:hover > .img-machine{
+    margin-top: 85px;
+}
+.title-machine{
+    background-color: #588157;
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+}
+@media (max-width:767px){
+    .img-machine{
+    margin-top: -2px !important;
+        width: 50%;
+    }
+    .card:hover > .img-machine{
+        margin-top: 85px !important;
+    }
+}
+/* End Maquinas */
+/* Start Softwares */
+.Softwares{
+    background-color: #344e41;
+}
+.Softwares .img-machine{
+    padding-top: 5px;
+}
+@media (max-width:767px){
+    .img-machine{
+        margin-top: 30px;
+    }
+    .card::before{
+        transform: translateY(-110px);
+
+    }
+}
+/* End Softwares */
+/* Start Footer */
+.footer{
+    background-color: #A3B18A;
+}
+.box-video{
+    background-color: #344e41;
+}
+.Box-Img-CON{
+    height: 500px;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+.BoxImg:hover{
+    background-color: #344e41;  
+}
+.BoxImg:hover p, .BoxImg:hover h6 {
+    color: #dad7cd;  
+}
+.BoxImg{
+    padding: 2px;
+    background-color: #A3B18A;
+}
+.BoxImg:not(:last-child){
+    border-bottom: #344e41 solid 2px;
+}
+.BoxImg p{
+    font-size: 12px;
+}
+@media (max-width:984px){
+    .Box-Img-CON{
+        margin-top: 20px;
+        display: flex;
+        height: 200px;
+        overflow-y: hidden;
+    overflow-x: scroll;
+    }
+    .BoxImg{
+        flex-basis: 1;
+        padding: 20px;
+    }
+    .BoxImg p{
+       display: none;
+    }
+}
+.links{
+    width: 50%;
+    margin: 0 auto;
+}
+.links a svg{
+    
+    color: #dad7cd;
+    font-size: 50px;
+    transition: 0s !important;
+}
+.links a svg:hover{
+    color: #344e41;
+}
+.textPer{
+    color: #344e41;
+    font-weight: 800;
+}
+.title-form{
+    color: #344e41;
+}
+.text-area{
+    height: 195px;
+}
+.parent-btn{
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+}
+button[type="submit"]{
+   width: 150px;
+}
+button[type="reset"]{
+   width: 150px;
+}
+/* End Footer */
